@@ -4,6 +4,12 @@ executors:
   python-3-11:
     docker:
       - image: python:3.11
+      - run:
+          name: Install Poetry
+          command: |
+            apt update
+            pip install --upgrade pip
+            pip install poetry
 
 jobs:
   test:
@@ -11,14 +17,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install dependencies
-          command: |
-            pip install --upgrade pip
-            pip install poetry
-            poetry install --without dev
-      - run:
           name: Run tests
-          command: python -m pytest
+          command: poetry run pytest
 
 workflows:
   version: 2
