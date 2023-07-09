@@ -4,9 +4,7 @@ executors:
   python-3-11:
     docker:
       - image: python:3.11
-      - run:
-          name: Install Poetry
-          command: |
+      - command: 
             apt update
             pip install --upgrade pip
             pip install poetry
