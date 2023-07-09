@@ -1,0 +1,15 @@
+.git
+.gitignore
+.pytest_cache
+.__pycache__
+.venv
+.vscode
+.env
+.flake8
+.gitlab-ci.yml
+.pre-commit-config.yaml
+docker-compose.yml
+homologation.docker-compose.yml
+main.docker-compose.yml
+README.md
+sample.env
