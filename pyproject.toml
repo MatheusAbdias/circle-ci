@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "hello-world-api"
+version = "0.1.0"
+description = ""
+authors = ["Matheus Abdias <matheusabdias@b2bit.company>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.100.0"
+uvicorn = {extras = ["standard"], version = "^0.22.0"}
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.277"
+black = "^23.3.0"
+mypy = "^1.4.1"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.0"
+
+[tool.ruff]
+
+src = ["src"]
+line-length = 88
+
+select = [
+    "F",
+    "I",
+    "N",
+    "YTT",
+    "S",
+    "B",
+    "COM",
+    "C4",
+    "DTZ",
+    "DJ",
+    "EM",
+    "EXE",
+    "ISC",
+    "ICN",
+    "G",
+    "T20",
+    "PYI",
+    "Q",
+    "RSE",
+    "RET",
+    "SIM",
+    "PL",
+]
+
+target-version = "py311"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

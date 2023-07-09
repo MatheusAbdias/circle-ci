@@ -1,0 +1,22 @@
+{
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    }
+  },
+  "python.formatting.provider": "black",
+  "editor.tabSize": 4,
+  "python.linting.enabled": true,
+  "python.testing.unittestArgs": [
+    "-v",
+    "-s",
+    "./src",
+    "-p",
+    "test_*.py"
+  ],
+  "python.testing.pytestEnabled": true,
+  "python.testing.cwd": "./src",
+  "coverage-gutters.coverageReportFileName": "coverage.xml",
+  "coverage-gutters.showLineCoverage": true
+}
