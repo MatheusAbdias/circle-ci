@@ -1,12 +1,13 @@
 version: 2.1
+
 executors:
-  python/default:
+  python-3-11:
     docker:
       - image: python:3.11
 
 jobs:
   test:
-    executor: python/default
+    executor: python-3-11
     steps:
       - checkout
       - run:
