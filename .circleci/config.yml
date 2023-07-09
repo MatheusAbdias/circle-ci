@@ -6,7 +6,7 @@ executors:
 
 jobs:
   test:
-    executor: python-3-11
+    executor: python/default
     steps:
       - checkout
       - run:
