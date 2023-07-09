@@ -6,11 +6,15 @@ executors:
 
 jobs:
   test:
-    executor: python/default
+    executor: python-3-11
     steps:
       - checkout
-      - python/install-packages:
-          pkg-manager: poetry
+      - run:
+          name: Install dependencies
+          command: |
+            pip install --upgrade pip
+            pip install poetry
+            poetry install
       - run:
           name: Run tests
           command: python -m pytest
