@@ -82,7 +82,7 @@ uvloop = ["uvloop (>=0.15.2)"]
 name = "certifi"
 version = "2023.5.7"
 description = "Python package for providing Mozilla's CA Bundle."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.6"
 files = [
@@ -193,7 +193,7 @@ files = [
 name = "httpcore"
 version = "0.17.3"
 description = "A minimal low-level HTTP client."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -263,7 +263,7 @@ test = ["Cython (>=0.29.24,<0.30.0)"]
 name = "httpx"
 version = "0.24.1"
 description = "The next generation HTTP client."
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -1033,4 +1033,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "5fbe5f30904623198f7464c502af42c2137c77e69cabaee504e161934bd00bcb"
+content-hash = "504784335c34ffa2573dad9c45910f7e4b86bb3f9b5ee26bd7c90df5977cc4c4"
