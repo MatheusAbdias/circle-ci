@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
+            pip install poetry
             poetry install --without dev
       - run:
           name: Run tests
