@@ -1,25 +1,26 @@
 version: 2.1
 
-executors:
-  python-3-11:
-    docker:
-      - image: python:3.11
-      - command: 
-            apt update
-            pip install --upgrade pip
-            pip install poetry
-
 jobs:
-  test:
-    executor: python-3-11
+  run_tests:
+    docker:
+      - image: python:3.11.0
     steps:
       - checkout
       - run:
+          name: Install dependencies
+          command: |
+            curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
+            poetry install --without dev
+      - run:
           name: Run tests
-          command: poetry run pytest
+          command: |
+            pytest --junitxml=test-reports/junit.xml --html=test-reports/pytest_report.html --self-contained-html
+      - store_test_results:
+          path: test-reports
+      - store_artifacts:
+          path: test-reports
 
 workflows:
-  version: 2
-  test:
+  build_test:
     jobs:
-      - test
+      - run_tests
