@@ -21,6 +21,7 @@ ruff = "^0.0.277"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^7.4.0"
+pytest-html = "^3.2.0"
 
 [tool.ruff]
 
